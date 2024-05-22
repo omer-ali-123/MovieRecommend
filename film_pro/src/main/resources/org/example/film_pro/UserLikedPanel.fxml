@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.film_pro.UserLikedController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" style="-fx-border-color: #C2C3C6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="247.0" text="4K FILM CEHENNEMİ" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="40.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="222.0" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@../../../Css/FirstLogin.css" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Label fx:id="label_username" text="Username" />
+                  <ImageView fitHeight="60.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../profile-user.png" />
+                     </image></ImageView>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="250.0" spacing="10.0" style="-fx-border-color: #C3C2C6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Menu">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="hbox_menu" alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#toMainPanel" prefHeight="25.0" prefWidth="250.0" spacing="15.0" stylesheets="@../../../Css/FirstLogin.css">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../home-icon-silhouette.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="27.0" prefWidth="120.0" text="Main Menu">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="selected" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+            </HBox>
+            <Separator prefHeight="9.0" prefWidth="250.0" />
+            <Label layoutX="10.0" layoutY="10.0" text="For You">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="hbox_liked" alignment="CENTER" maxHeight="-Infinity" prefHeight="25.0" prefWidth="250.0" spacing="15.0" stylesheets="@../../../Css/FirstLogin.css">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../like%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="27.0" prefWidth="120.0" text="Liked Films">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="selected" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="hbox_disliked" alignment="CENTER" layoutX="10.0" layoutY="37.0" maxHeight="-Infinity" onMouseClicked="#toDislikedPanel" prefHeight="25.0" prefWidth="250.0" spacing="15.0" stylesheets="@../../../Css/FirstLogin.css">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../dislike%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="27.0" prefWidth="120.0" text="Disliked Films">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="selected" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+            </HBox>
+            <HBox fx:id="hbox_allFilms" alignment="CENTER" maxHeight="-Infinity" onMouseClicked="#toAllFilms" prefHeight="25.0" prefWidth="250.0" spacing="15.0" stylesheets="@../../../Css/FirstLogin.css">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../clapperboard.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="27.0" prefWidth="120.0" text="All Films">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="selected" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+            </HBox>
+            <Pane prefHeight="464.0" prefWidth="250.0" VBox.vgrow="ALWAYS" />
+            <HBox fx:id="Hbox_exit" alignment="CENTER" layoutX="10.0" layoutY="68.0" maxHeight="-Infinity" onMouseClicked="#toExit" prefHeight="25.0" prefWidth="250.0" spacing="15.0" style="-fx-border-color: #C3C4C6;" stylesheets="@../../../Css/FirstLogin.css">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../exit%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="27.0" prefWidth="70.0" text="Exit">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="selected" />
+                  <String fx:value="mouse-moved" />
+               </styleClass>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="cardLayout" prefHeight="200.0" prefWidth="100.0" spacing="15.0" styleClass="transparent" stylesheets="@../../../Css/FirstLogin.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Label text="Liked Films">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="793.0" prefWidth="1035.0" styleClass="transparent" stylesheets="@../../../Css/FirstLogin.css">
+               <content>
+                  <GridPane fx:id="filmContainer" prefHeight="30.0" prefWidth="0.0" stylesheets="@../../../Css/FirstLogin.css">
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content></ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

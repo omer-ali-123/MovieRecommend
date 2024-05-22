@@ -1,0 +1,46 @@
+.Sinema{
+    -fx-background-image: url(Sinema.jpg);
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+.arkaplan{
+    -fx-background-image: url(arkaplan.jpg);
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+.FilmEkle{
+    -fx-background-image: url(Film_Ekle.jpg);
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+
+.white-background{
+    -fx-background-color:#ffff;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.round-layout{
+    -fx-border-radius: 50;
+    -fx-border-color: #070707;
+}
+
+.selected{
+    -fx-background-color: #F3F3F3;
+}
+
+.mouse-moved: hover{
+    -fx-background-color: #E4E4E4;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0),10,0,0,10)
+}
